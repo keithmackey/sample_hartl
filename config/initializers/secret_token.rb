@@ -10,3 +10,19 @@
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
 SampleHartl::Application.config.secret_key_base = '8eb6d08510b4cdbfc39b339f1726c0a4c77a377189124cd90cece8df931d418bc61388655956a72f5921751bd18b02afe86176702aac6de4f7b6c48b92b5f145'
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+SampleHartl::Application.config.secret_key_base = secure_tokengit a
