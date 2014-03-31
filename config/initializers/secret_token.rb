@@ -25,4 +25,4 @@ def secure_token
   end
 end
 
-SampleHartl::Application.config.secret_key_base = secure_tokengit a
+SampleHartl::Application.config.secret_key_base = secure_token
