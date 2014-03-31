@@ -1,0 +1,12 @@
+# Be sure to restart your server when you modify this file.
+
+# Your secret key is used for verifying the integrity of signed cookies.
+# If you change this key, all old signed cookies will become invalid!
+
+# Make sure the secret is at least 30 characters and all random,
+# no regular words or you'll be exposed to dictionary attacks.
+# You can use `rake secret` to generate a secure secret key.
+
+# Make sure your secret_key_base is kept private
+# if you're sharing your code publicly.
+SampleHartl::Application.config.secret_key_base = '8eb6d08510b4cdbfc39b339f1726c0a4c77a377189124cd90cece8df931d418bc61388655956a72f5921751bd18b02afe86176702aac6de4f7b6c48b92b5f145'
